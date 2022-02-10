@@ -16,3 +16,11 @@ average_price <- orders %>%
   summarize(mean_price = mean(price, na.rm = TRUE))
 
 average_price
+
+
+
+click_source <- page_visits %>%
+  group_by(utm_source) %>%
+  summarize(count = n())
+
+click_source
