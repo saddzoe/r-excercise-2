@@ -24,3 +24,10 @@ click_source <- page_visits %>%
   summarize(count = n())
 
 click_source
+
+
+click_source_by_month <- page_visits %>%
+  group_by(utm_source, month) %>%
+  summarize(count = n())
+
+click_source_by_month
